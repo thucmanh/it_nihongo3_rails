@@ -12,7 +12,8 @@
   <body>
     <%= link_to "ホーム", root_path %>
     <% if user_signed_in? %>
-      <%= current_user.email %>
+    <br><span>こんにちは、</span>
+      <%= link_to current_user.email, users_show_path %> <br>
     <% end %>
     <%= yield %>
     <div class="container-fluid">
