@@ -1,4 +1,4 @@
-<%= link_to "ホーム", root_path %> |
+
 <% if user_signed_in? %>
     <%= link_to "サインアウト", destroy_user_session_path, method: :delete %>
     <hr><h1><b>HOME PAGE</b></h1>
