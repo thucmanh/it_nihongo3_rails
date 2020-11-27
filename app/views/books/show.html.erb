@@ -21,9 +21,10 @@
 </p>
 
 <h2>Review From</h2>
-<%= form_with(model: @book_review, local: true) do |form| %>
+<%= form_for BookReview.new do |form| %>
   <div class= "field">
     <%= form.text_area :review %>
+    <%= form.hidden_field :user_id, :value => current_user.id %>
     <%= form.hidden_field :book_id, :value => @book.id %>
   </div>
   <div class="actions">
